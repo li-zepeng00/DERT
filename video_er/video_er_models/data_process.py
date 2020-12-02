@@ -168,7 +168,7 @@ class ImageDataset (Dataset):
 
 
 def data_processer(path):
-	transformer = get_transforms (128, 64, "crop random-erase", is_train=True)
+	transformer = get_transforms (128, 64, "crop random-erase color-jitter", is_train=True)
 	transformer_test = get_test_transforms (128, 64)
 	file = open (path + "train_list.csv", "r")
 	reader = csv.reader (file)
